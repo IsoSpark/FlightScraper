@@ -2,7 +2,7 @@
 ## A Web scraping project to scrape the data from https://www.flightstats.com/v2/flight-tracker<br/>
 
 ### Do these installs before running the project,<br/>
-> pip install requirements.txt
+> pip install -r requirements.txt
 
 ### Run uvicon to create local ASGI server
 > uvicorn main:app --reload
