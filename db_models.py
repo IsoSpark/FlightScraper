@@ -1,0 +1,33 @@
+from sqlalchemy import Column, Integer, String
+from database import Base
+
+class FlightDB(Base):
+    __tablename__ = "flights_record"  # Table name
+    db_flightid = Column(Integer, primary_key=True, index=True)
+    db_airline_code = Column(String(2), nullable=True)
+    db_flightnumber = Column(String(4), nullable=True)
+    db_carriername = Column(String(200), nullable=True)
+    db_flightstatus = Column(String(100), nullable=True)
+    db_flightdesc = Column(String(100), nullable=True)
+    db_dep_location = Column(String(1000), nullable=True)
+    db_dep_airportname = Column(String(1000), nullable=True)
+    db_dep_iata = Column(String(3), nullable=True)
+    db_dep_dt_sched = Column(String(20), nullable=True)
+    db_dep_dt_actual = Column(String(20), nullable=True)
+    db_dep_terminal = Column(String(100), nullable=True)
+    db_dep_gate = Column(String(10), nullable=True)
+    db_arv_location = Column(String(1000), nullable=True)
+    db_arv_airportname = Column(String(1000), nullable=True)
+    db_arv_iata = Column(String(3), nullable=True)
+    db_arv_dt_sched = Column(String(20), nullable=True)
+    db_arv_dt_actual = Column(String(20), nullable=True)
+    db_arv_terminal = Column(String(100), nullable=True)
+    db_arv_gate = Column(String(10), nullable=True)
+    db_arv_baggage = Column(String(10), nullable=True)
+    db_adtnl_equip_iata = Column(String(10), nullable=True)
+    db_adtnl_equip_name = Column(String(200), nullable=True)
+    db_adtnl_tailnumber = Column(String(100), nullable=True)
+    db_adtnl_callsign = Column(String(100), nullable=True)
+    db_adtnl_bearing = Column(Integer, default=0)
+    db_adtnl_heading = Column(Integer, default=0)
+    db_fleetAircraftId = Column(String(100), nullable=True)
